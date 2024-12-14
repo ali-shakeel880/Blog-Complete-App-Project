@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddArticleActivity">
+
+    <TextView
+        android:id="@+id/add_blog_textView_add_blog_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Blog Here "
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/add_blog_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blog Title"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_blog_textView_add_blog_here"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_blog_title_EditText"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_blog_title_textView"
+        app:layout_constraintTop_toBottomOf="@+id/add_blog_title_textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_blog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline_blue"
+            android:hint="Blog Title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/add_blog_description_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blog Description"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/add_blog_title_EditText"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_blog_description_EditText"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_blog_description_textView"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_blog_description_textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_blog_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_outline_blue"
+
+            android:gravity="top"
+
+            android:hint="Blog Description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/edit_blog_button"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31sp"
+
+        android:text="Edit Blog"
+
+        app:layout_goneMarginTop="@dimen/_250sdp"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+
+        android:backgroundTint="@color/blue"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/add_blog_description_EditText"
+        app:layout_constraintStart_toStartOf="@id/add_blog_description_EditText"
+        app:layout_constraintEnd_toEndOf="@id/add_blog_description_EditText"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

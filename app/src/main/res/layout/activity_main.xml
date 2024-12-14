@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/news_feed_text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="News feed"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView_for_image_profile_home_screen"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:cardCornerRadius="100dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/profile_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/registration_defauult_image"
+            android:scaleType="fitXY"
+            />
+    </androidx.cardview.widget.CardView>
+
+<ImageButton
+    android:id="@+id/saveButton_top_of_home_screen"
+    android:layout_width="20dp"
+    android:layout_height="30dp"
+    android:src="@drawable/save_top_img"
+    android:layout_marginEnd="40dp"
+    android:background="@android:color/transparent"
+    app:layout_constraintEnd_toStartOf="@+id/cardView_for_image_profile_home_screen"
+    app:layout_constraintTop_toTopOf="@+id/cardView_for_image_profile_home_screen"
+    app:layout_constraintBottom_toBottomOf="@+id/cardView_for_image_profile_home_screen"
+
+
+    />
+
+    <SearchView
+        android:id="@+id/search_blog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:queryHint="Search"
+        android:iconifiedByDefault="false"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/news_feed_text_View"
+        app:layout_constraintEnd_toEndOf="@+id/cardView_for_image_profile_home_screen"
+        app:layout_constraintTop_toBottomOf="@+id/news_feed_text_View"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/search_blog"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/search_blog"
+        app:layout_constraintTop_toBottomOf="@+id/search_blog"
+
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/blog_item" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:borderWidth="2dp"
+
+        app:shapeAppearanceOverlay="@style/round"
+        app:tint="@color/white"
+        android:src="@drawable/plus_image_icon"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

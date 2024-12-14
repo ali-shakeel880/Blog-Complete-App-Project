@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="374dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardCornerRadius="9dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/item_heading"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#00A3FF"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:text="Technological advancements continue to shape our world"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/item_blogger_aurthor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="item_blogger_ \n naurthor_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardView_for_image_item"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintEnd_toStartOf="@id/item_blogger_aurthor_name"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/registration_defauult_image"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/date_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="22-2-34"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintStart_toStartOf="@+id/cardView_for_image_item"
+            app:layout_constraintTop_toBottomOf="@id/item_blogger_aurthor_name" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_item" />
+
+        <TextView
+            android:id="@+id/blog_text_item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="9dp"
+            android:text="As technological advancements continue to shape our world, the fusion of artificial intelligence and human creativity is unlocking new horizons in innovation and problem-solving."
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/read_more_button_item"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <Button
+            android:id="@+id/read_more_button_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="13dp"
+
+            android:backgroundTint="#00A3FF"
+            android:text="Read More"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/edit_button_item"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/edit_button_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="13dp"
+            android:backgroundTint="@color/black"
+            android:text="Edit"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/delete_button_item"
+
+            app:layout_constraintStart_toEndOf="@+id/read_more_button_item" />
+
+        <Button
+            android:id="@+id/delete_button_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="13dp"
+            android:backgroundTint="#FF0000"
+
+            android:text="Delete"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_button_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
